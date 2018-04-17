@@ -3,8 +3,9 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  resources :students, only: [:show, :new, :create, :edit, :update]
-  resources :school_classes, only: [:show, :new, :create, :edit, :update]
+  resources :artists, only: [:show, :new, :create, :edit, :update]
+  resources :songs, only: [:show, :new, :create, :edit, :update]
+  resources :genres, only: [:show, :new, :create, :edit, :update]
   # root 'welcome#index'
 
   # Example of regular route:
