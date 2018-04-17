@@ -1,4 +1,4 @@
-class GenresController < ApplicationController
+  @genre.saveclass GenresController < ApplicationController
 
   def show
     @genre = Genre.find(params[:id])
@@ -11,7 +11,7 @@ class GenresController < ApplicationController
   def create
     @genre = Genre.new
     @genre = Genre.new(genre_params(name: [:genre][:name])
-
+    @genre.save
     redirect_to genre_path(@genre)
   end
 
