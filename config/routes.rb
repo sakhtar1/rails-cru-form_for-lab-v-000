@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
   resources :artists, only: [:show, :new, :create, :edit, :update]
-  resources :songs, only: [:show, :new, :create, :edit, :update]
+  resources :songs, only: [:index, :show, :new, :create, :edit, :update]
   resources :genres, only: [:show, :new, :create, :edit, :update]
   # root 'welcome#index'
 
