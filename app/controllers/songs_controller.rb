@@ -10,7 +10,7 @@ class SongsController < ApplicationController
 
     def create
       @song = Song.new
-      @song = Song.create(name: :song :name, artist_id: @artist.id, genre_id: @genre.id)
+      @song = Song.create(name: [:song] [:name], artist_id: @artist.id, genre_id: @genre.id)
       @song.save
       redirect_to song_path(@song)
     end
