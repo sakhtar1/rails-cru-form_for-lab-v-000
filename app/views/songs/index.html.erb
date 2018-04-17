@@ -1,14 +1,4 @@
-<% @artists.each do |artist| %>
-  <div><%= link_to artist.name, artist_path(artist) %>
-        <%= artist.bio %></div>
-<% end %>
-
-<% @genres.each do |genre| %>
-  <div><%= link_to genre.name, genre_path(genre) %></div>
-<% end %>
 
 <% @songs.each do |song| %>
-  <p><%= link_to song.name, song_path(song) %>
-       <% song.artist_id %>
-       <%= song.genre_id %></p>
+  <p>song.name</p>
 <% end %>
