@@ -9,12 +9,16 @@ class ArtistsController < ApplicationController
   end
 
   def create
-    @artist = Artist.new()
+    @artist = Artist.new(artist_params(:name, :bio))
+    @student = Student.new(student_params(:first_name, :last_name))
+    @student.save
+    redirect_to student_path(@student)
   end
 
   def update
     @artist = Artist.find(params[:id])
-
+    @student.update(student_params(:first_name, :last_name))
+	  redirect_to student_path(@student)
   end
 
   def edit
