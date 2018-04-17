@@ -8,7 +8,7 @@
 <% end %>
 
 <% @songs.each do |song| %>
-  <div><%= link_to song.name, song_path(song) %>
+  <p><%= link_to song.name, song_path(song) %>
        <% song.artist_id %>
-       <%= song.genre_id %></div>
+       <%= song.genre_id %></p>
 <% end %>
