@@ -10,9 +10,8 @@ class ArtistsController < ApplicationController
 
   def create
     @artist = Artist.new(artist_params(name: [:artist][:name], bio: [:artist][:bio]))
-    @student = Student.new(student_params(:first_name, :last_name))
-    @student.save
-    redirect_to student_path(@student)
+    @artist.save
+    redirect_to student_path(@artist)
   end
 
   def update
