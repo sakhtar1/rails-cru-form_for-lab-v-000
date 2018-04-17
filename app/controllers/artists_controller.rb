@@ -9,7 +9,7 @@ class ArtistsController < ApplicationController
   end
 
   def create
-    @artist = Artist.new(artist_params(:name, :bio))
+    @artist = Artist.new(artist_params(name: [:artist][:name], bio: [:artist][:bio]))
     @student = Student.new(student_params(:first_name, :last_name))
     @student.save
     redirect_to student_path(@student)
