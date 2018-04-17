@@ -17,6 +17,9 @@ class ArtistsController < ApplicationController
 
   end
 
+  def edit
+  end
+
   private
 
 		def artist_params(*args)
