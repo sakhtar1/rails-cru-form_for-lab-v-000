@@ -9,11 +9,17 @@ class ArtistsController < ApplicationController
   end
 
   def create
-    @artist = Artist.find(params[:id])
+    @artist = Artist.new()
   end
 
   def update
     @artist = Artist.find(params[:id])
 
   end
+
+  private
+
+		def artist_params(*args)
+			params.require(:artist).permit(*args)
+		end
 end
